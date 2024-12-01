@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIgang Official</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            color: #333;
+            background: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: #ffffff;
+            padding: 20px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        header .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo-container img {
+            width: 100px; /* Increased size */
+            height: auto;
+            margin-right: 15px;
+            animation: rotate-logo 5s linear infinite; /* Rotation Animation */
+        }
+
+        header .logo-container h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #000;
+        }
+
+        header nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: #666;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #000;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 100px 50px;
+            background: #ffffff;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .hero-text {
+            max-width: 50%;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            color: #000;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .hero-text button {
+            background: #0071e3;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .hero-text button:hover {
+            background: #005bb5;
+            transform: scale(1.05);
+        }
+
+        .hero-image {
+            max-width: 45%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Social Section */
+        .socials {
+            padding: 50px;
+            background: #f9f9f9;
+            text-align: center;
+        }
+
+        .socials h2 {
+            font-size: 2rem;
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #0071e3;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        footer a:hover {
+            color: #005bb5;
+        }
+
+        /* Keyframes for Logo Rotation */
+        @keyframes rotate-logo {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <img src="logo-logo.png" alt="AIgang Logo">
+            <h1>AIgangcoin</h1>
+        </div>
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#socials">Socials</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-text">
+            <h1>Welcome to AIgang</h1>
+            <p>24/7 Live Streaming by AIgang himself – coming soon! Stay tuned. $AIG is on the way!</p>
+            <button>Learn More</button>
+        </div>
+        <div class="hero-image">
+            <img src="1side.png" alt="AIgang Character">
+        </div>
+    </section>
+
+    <!-- Socials Section -->
+    <section class="socials" id="socials">
+        <h2>Follow Us</h2>
+        <div class="social-icons">
+            <a href="https://twitter.com/aigangoffical" target="_blank"><img src="twitter-logo.png" alt="Twitter"></a>
+            <a href="https://instagram.com/ai_gangofficial" target="_blank"><img src="instagram-logo.png" alt="Instagram"></a>
+            <a href="https://tiktok.com/@ai.gangofficial" target="_blank"><img src="tiktok-logo.png" alt="TikTok"></a>
+            <a href="https://discord.gg/Svp7qF52" target="_blank"><img src="discord-logo.png" alt="Discord"></a>
+            <a href="https://youtube.com/@aigangofficial" target="_blank"><img src="youtube-logo.png" alt="YouTube"></a>
+            <a href="https://twitch.tv/aigangofficial" target="_blank"><img src="twitch-logo.png" alt="Twitch"></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        © 2024 AIgang Official. All Rights Reserved. <a href="#hero">Back to top</a>
+    </footer>
+
+</body>
+</html>
