@@ -4,20 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AIgang Official</title>
+    <script>
+        // Metricool Tracking Code
+        function loadScript(a){
+            var b=document.getElementsByTagName("head")[0],
+            c=document.createElement("script");
+            c.type="text/javascript";
+            c.src="https://tracker.metricool.com/resources/be.js";
+            c.onreadystatechange=a;
+            c.onload=a;
+            b.appendChild(c)
+        }
+        loadScript(function(){
+            beTracker.t({hash:"14afa4e82d3df1a14fdc24f25d3013d13"})
+        });
+    </script>
     <style>
         /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Body Styling */
         body {
+            margin: 0;
             font-family: 'Helvetica Neue', sans-serif;
+            background-color: #f9f9f9;
             color: #333;
-            background: #f5f5f5;
-            line-height: 1.6;
         }
 
         /* Header */
@@ -36,10 +44,10 @@
         }
 
         header .logo-container img {
-            width: 100px; /* Increased size */
+            width: 100px;
             height: auto;
             margin-right: 15px;
-            animation: rotate-logo 5s linear infinite; /* Rotation Animation */
+            animation: rotate-logo 5s linear infinite;
         }
 
         header .logo-container h1 {
@@ -57,7 +65,7 @@
             text-decoration: none;
             color: #666;
             font-weight: 500;
-            font-size: 1rem;
+            font-size: 1.3rem;
             transition: color 0.3s ease;
         }
 
@@ -68,177 +76,126 @@
         /* Hero Section */
         .hero {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            padding: 100px 50px;
-            background: #ffffff;
-            border-bottom: 1px solid #e0e0e0;
+            flex-direction: column;
+            padding: 100px 20px;
+            background-color: #ffffff;
         }
 
-        .hero-text {
-            max-width: 50%;
-        }
-
-        .hero-text h1 {
+        .hero h1 {
             font-size: 3rem;
-            color: #000;
-            font-weight: bold;
             margin-bottom: 20px;
         }
 
-        .hero-text p {
-            font-size: 1.2rem;
-            color: #555;
+        .hero p {
+            font-size: 1.5rem;
             margin-bottom: 30px;
-        }
-
-        .hero-text button {
-            background: #0071e3;
-            color: #fff;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background 0.3s ease, transform 0.2s ease;
-        }
-
-        .hero-text button:hover {
-            background: #005bb5;
-            transform: scale(1.05);
-        }
-
-        .hero-image {
-            max-width: 45%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-image img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Social Section */
-        .socials {
-            padding: 50px;
-            background: #f9f9f9;
             text-align: center;
+            max-width: 800px;
         }
 
-        .socials h2 {
-            font-size: 2rem;
-            color: #000;
-            margin-bottom: 20px;
+        .hero img {
+            width: 300px;
+            height: auto;
+            animation: float 3s infinite ease-in-out;
         }
 
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 20px;
+        /* Socials Section */
+        .socials {
+            text-align: center;
+            margin-top: 50px;
         }
 
-        .social-icons a {
-            display: inline-block;
-            width: 60px;
-            height: 60px;
-            background: #fff;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        .socials img {
+            width: 50px;
+            height: auto;
+            margin: 0 15px;
+            transition: transform 0.3s ease;
         }
 
-        .social-icons a:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .social-icons img {
-            width: 30px;
-            height: 30px;
+        .socials img:hover {
+            transform: scale(1.2);
         }
 
         /* Footer */
         footer {
             background: #000;
             color: #fff;
-            padding: 20px;
+            padding: 20px 0;
             text-align: center;
-            font-size: 0.9rem;
+            margin-top: 50px;
         }
 
-        footer a {
-            color: #0071e3;
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        footer a:hover {
-            color: #005bb5;
-        }
-
-        /* Keyframes for Logo Rotation */
+        /* Animations */
         @keyframes rotate-logo {
-            from {
+            0% {
                 transform: rotate(0deg);
             }
-            to {
+            100% {
                 transform: rotate(360deg);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
             }
         }
     </style>
 </head>
 <body>
-
-    <!-- Header -->
+    <!-- Header Section -->
     <header>
         <div class="logo-container">
             <img src="logo-logo.png" alt="AIgang Logo">
             <h1>AIgangcoin</h1>
         </div>
         <nav>
-            <a href="#hero">Home</a>
+            <a href="#home">Home</a>
             <a href="#socials">Socials</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-text">
-            <h1>Welcome to AIgang</h1>
-            <p>24/7 Live Streaming by AIgang himself – coming soon! Stay tuned. $AIG is on the way!</p>
-            <button>Learn More</button>
-        </div>
-        <div class="hero-image">
-            <img src="1side.png" alt="AIgang Character">
-        </div>
+    <section class="hero" id="home">
+        <h1>Welcome to AIgang</h1>
+        <p>24/7 Live Streaming by AIgang himself – coming soon! Stay tuned. $AIG is on the way!</p>
+        <img src="1side.png" alt="AIgang Character">
     </section>
 
-    <!-- Socials Section -->
+    <!-- Social Media Section -->
     <section class="socials" id="socials">
-        <h2>Follow Us</h2>
-        <div class="social-icons">
-            <a href="https://twitter.com/aigangoffical" target="_blank"><img src="twitter-logo.png" alt="Twitter"></a>
-            <a href="https://instagram.com/ai_gangofficial" target="_blank"><img src="instagram-logo.png" alt="Instagram"></a>
-            <a href="https://tiktok.com/@ai.gangofficial" target="_blank"><img src="tiktok-logo.png" alt="TikTok"></a>
-            <a href="https://discord.gg/Svp7qF52" target="_blank"><img src="discord-logo.png" alt="Discord"></a>
-            <a href="https://youtube.com/@aigangofficial" target="_blank"><img src="youtube-logo.png" alt="YouTube"></a>
-            <a href="https://twitch.tv/aigangofficial" target="_blank"><img src="twitch-logo.png" alt="Twitch"></a>
+        <h2>Connect With Us</h2>
+        <div>
+            <a href="https://twitter.com/aigangoffical" target="_blank">
+                <img src="twitter-logo.png" alt="Twitter">
+            </a>
+            <a href="https://instagram.com/ai_gangofficial" target="_blank">
+                <img src="instagram-logo.png" alt="Instagram">
+            </a>
+            <a href="https://tiktok.com/@ai.gangofficial" target="_blank">
+                <img src="tiktok-logo.png" alt="TikTok">
+            </a>
+            <a href="https://discord.gg/Svp7qF52" target="_blank">
+                <img src="discord-logo.png" alt="Discord">
+            </a>
+            <a href="https://youtube.com/@aigangofficial" target="_blank">
+                <img src="youtube-logo.png" alt="YouTube">
+            </a>
+            <a href="https://twitch.tv/aigangofficial" target="_blank">
+                <img src="twitch-logo.png" alt="Twitch">
+            </a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        © 2024 AIgang Official. All Rights Reserved. <a href="#hero">Back to top</a>
+        <p>© 2024 AIgang Official. All Rights Reserved.</p>
     </footer>
-
 </body>
 </html>
