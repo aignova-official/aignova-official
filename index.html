@@ -3,29 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIgang Official</title>
-    <script>
-        // Metricool Tracking Code
-        function loadScript(a){
-            var b=document.getElementsByTagName("head")[0],
-            c=document.createElement("script");
-            c.type="text/javascript";
-            c.src="https://tracker.metricool.com/resources/be.js";
-            c.onreadystatechange=a;
-            c.onload=a;
-            b.appendChild(c)
-        }
-        loadScript(function(){
-            beTracker.t({hash:"14afa4e82d3df1a14fdc24f25d3013d13"})
-        });
-    </script>
+    <title>AIGNOVA Official</title>
     <style>
         /* General Reset */
         body {
             margin: 0;
             font-family: 'Helvetica Neue', sans-serif;
-            background-color: #f9f9f9;
             color: #333;
+            background: #0d0d0d; /* Dark background for a futuristic look */
         }
 
         /* Header */
@@ -45,15 +30,14 @@
 
         header .logo-container img {
             width: 100px;
-            height: auto;
             margin-right: 15px;
-            animation: rotate-logo 5s linear infinite;
+            animation: rotate-logo 5s linear infinite; /* Rotation Animation */
         }
 
         header .logo-container h1 {
             font-size: 2rem;
             font-weight: bold;
-            color: #000;
+            color: #333;
         }
 
         header nav {
@@ -65,7 +49,7 @@
             text-decoration: none;
             color: #666;
             font-weight: 500;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             transition: color 0.3s ease;
         }
 
@@ -76,58 +60,81 @@
         /* Hero Section */
         .hero {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            flex-direction: column;
-            padding: 100px 20px;
-            background-color: #ffffff;
+            padding: 100px 50px;
+            background: linear-gradient(to right, #000, #0d0d0d);
+            color: #fff;
+        }
+
+        .hero .text-container {
+            max-width: 600px;
         }
 
         .hero h1 {
             font-size: 3rem;
+            font-weight: bold;
             margin-bottom: 20px;
+            color: #e0e0e0;
         }
 
         .hero p {
             font-size: 1.5rem;
+            line-height: 1.6;
             margin-bottom: 30px;
-            text-align: center;
-            max-width: 800px;
+        }
+
+        .hero button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #fff;
+            background: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .hero button:hover {
+            background: #0056b3;
         }
 
         .hero img {
-            width: 300px;
+            max-width: 400px;
             height: auto;
-            animation: float 3s infinite ease-in-out;
+            animation: float 4s ease-in-out infinite; /* Smooth animation */
         }
 
-        /* Socials Section */
-        .socials {
+        .hero .character-name {
             text-align: center;
-            margin-top: 50px;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #00ffcc; /* Neon cyan color for modern look */
+            text-shadow: 0 0 10px #00ffcc, 0 0 20px #00cc99, 0 0 30px #008f7a; /* Glowing effect */
+            animation: pulse 3s infinite; /* Subtle glowing animation */
         }
 
-        .socials img {
+        /* Social Icons */
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px; /* Raised socials higher */
+        }
+
+        .socials a img {
             width: 50px;
-            height: auto;
-            margin: 0 15px;
+            height: 50px;
             transition: transform 0.3s ease;
         }
 
-        .socials img:hover {
+        .socials a:hover img {
             transform: scale(1.2);
         }
 
-        /* Footer */
-        footer {
-            background: #000;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        /* Animations */
+        /* Keyframes */
         @keyframes rotate-logo {
             0% {
                 transform: rotate(0deg);
@@ -142,60 +149,54 @@
                 transform: translateY(0);
             }
             50% {
-                transform: translateY(-10px);
+                transform: translateY(-20px); /* Smooth floating effect */
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                text-shadow: 0 0 10px #00ffcc, 0 0 20px #00cc99, 0 0 30px #008f7a;
+            }
+            50% {
+                text-shadow: 0 0 15px #00ffcc, 0 0 25px #00cc99, 0 0 35px #008f7a;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header Section -->
     <header>
         <div class="logo-container">
-            <img src="logo-logo.png" alt="AIgang Logo">
-            <h1>AIgangcoin</h1>
+            <img src="logo-logo.png" alt="AIGNOVA Logo">
+            <h1>AIGNOVA Official</h1>
         </div>
         <nav>
             <a href="#home">Home</a>
-            <a href="#socials">Socials</a>
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+            <a href="#roadmap">Roadmap</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <h1>Welcome to AIgang</h1>
-        <p>24/7 Live Streaming by AIgang himself – coming soon! Stay tuned. $AIG is on the way!</p>
-        <img src="1side.png" alt="AIgang Character">
-    </section>
-
-    <!-- Social Media Section -->
-    <section class="socials" id="socials">
-        <h2>Connect With Us</h2>
-        <div>
-            <a href="https://twitter.com/aigangoffical" target="_blank">
-                <img src="twitter-logo.png" alt="Twitter">
-            </a>
-            <a href="https://instagram.com/ai_gangofficial" target="_blank">
-                <img src="instagram-logo.png" alt="Instagram">
-            </a>
-            <a href="https://tiktok.com/@ai.gangofficial" target="_blank">
-                <img src="tiktok-logo.png" alt="TikTok">
-            </a>
-            <a href="https://discord.gg/Svp7qF52" target="_blank">
-                <img src="discord-logo.png" alt="Discord">
-            </a>
-            <a href="https://youtube.com/@aigangofficial" target="_blank">
-                <img src="youtube-logo.png" alt="YouTube">
-            </a>
-            <a href="https://twitch.tv/aigangofficial" target="_blank">
-                <img src="twitch-logo.png" alt="Twitch">
-            </a>
+    <section id="home" class="hero">
+        <div class="text-container">
+            <h1>Welcome to AIGNOVA</h1>
+            <p>24/7 Live Streaming by Nova himself – coming soon! Stay tuned. $AIG is on the way!</p>
+            <button>Learn More</button>
+        </div>
+        <div class="character-container">
+            <img src="1side.png" alt="AIGNOVA Character">
+            <div class="character-name">Hi, my name is Nova</div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2024 AIgang Official. All Rights Reserved.</p>
-    </footer>
+    <div class="socials">
+        <a href="https://twitter.com/aignovaofficial" target="_blank"><img src="twitter-logo.png" alt="Twitter"></a>
+        <a href="https://instagram.com/aignova.official" target="_blank"><img src="instagram-logo.png" alt="Instagram"></a>
+        <a href="https://tiktok.com/@aignovaofficial" target="_blank"><img src="tiktok-logo.png" alt="TikTok"></a>
+        <a href="https://discord.gg/Svp7qF52" target="_blank"><img src="discord-logo.png" alt="Discord"></a>
+        <a href="https://youtube.com/@aignovaofficial" target="_blank"><img src="youtube-logo.png" alt="YouTube"></a>
+        <a href="https://twitch.tv/aignovaofficial" target="_blank"><img src="twitch-logo.png" alt="Twitch"></a>
+    </div>
 </body>
 </html>
